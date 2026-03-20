@@ -148,22 +148,6 @@ style: |
     font-size: 1.2em;
   }
 
-  /* Highlight box */
-  .highlight {
-    background: var(--color-accent-light);
-    border-left: 4px solid var(--color-accent);
-    padding: 12px 16px;
-    border-radius: 0 6px 6px 0;
-    margin: 0.6em 0;
-  }
-
-  /* Two-column layout */
-  .columns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2em;
-  }
-
   /* Tag/badge */
   .tag {
     display: inline-block;
@@ -201,7 +185,8 @@ style: |
 
 1. **GitHub Copilot の概要**
 2. **GitHub Universe 2025 の発表とその後の動向**
-3. **GitHub Copilot アップデート情報のピックアップ**<br>　（GitHub Universe 2025 以降）
+3. **GitHub Copilot アップデート情報のピックアップ**
+　（GitHub Universe 2025 以降）
 4. **その他の GitHub 関連情報のピックアップ**
 
 ---
@@ -216,35 +201,37 @@ style: |
 
 ## GitHub Copilot とは
 
-- **GitHub と OpenAI が共同開発** した AI ペアプログラミングツール
-- コードの補完・生成・説明・レビューを AI がアシスト
-- **2022年6月** に一般提供開始、現在は大幅に機能拡張
+> *"GitHub Copilot is an AI coding assistant that helps you write code faster and with less effort. Then, you can focus more energy on problem solving and collaboration."*
+> — docs.github.com
 
-<br>
+### 利用できる場所
+- **IDE**：VS Code、Visual Studio、JetBrains IDE、Eclipse、Xcode、Vim/Neovim
+- **GitHub.com**（Web）
+- **GitHub Mobile**（チャットインターフェース）
+- **コマンドライン**：GitHub CLI（Copilot CLI）
+- **Windows Terminal Canary**（Terminal Chat）
 
-> *"GitHub Copilot is your AI pair programmer."*
-> — github.blog
-
-<br>
-
-- 50以上のプログラミング言語に対応
-- VS Code / Visual Studio / JetBrains / Neovim / Xcode 等に対応
+> 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 ---
 
 ## 主な機能
 
-### 🤖 コード補完・生成
-- インライン補完：コードを書きながらリアルタイムに次のコードを提案
-- チャット（Copilot Chat）：自然言語でコードの質問・生成・説明を依頼
+### コード補完・提案
+- IDE でのインライン補完：コンテキストを読み取り次のコードをリアルタイム提案
 
-### 🛠 エージェント機能
-- **Copilot coding agent**：Issue をアサインするだけで、ブランチ作成・コード変更・PR作成まで自律実行
-- **Copilot Workspace**：アイデアからコード変更計画・実装まで一貫サポート
+### Copilot Chat
+- IDE や GitHub.com でコードについて自然言語で質問・生成・説明を依頼
 
-### 🔒 セキュリティ
-- 脆弱なコードの提案フィルタリング
-- セキュリティ脆弱性の自動検出・修正提案
+### Copilot coding agent
+- Issue をアサインするだけで、ブランチ作成・コード変更・PR 作成まで **自律実行**
+- Copilot Pro+、Business、Enterprise で利用可能
+
+### その他
+- PR のコード変更の説明文を自動生成
+- **Copilot Spaces**：コンテキストを整理・共有してより関連性の高い回答を取得
+
+> 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 ---
 
@@ -252,31 +239,17 @@ style: |
 
 | プラン | 対象 | 主な特徴 |
 |--------|------|----------|
-| **Free** | 個人（無料） | 月2,000回のコード補完、月50回のチャット |
-| **Pro** | 個人 $10/月 | 無制限の補完、月300回のプレミアムリクエスト |
-| **Pro+** | 個人 $39/月 | 全モデル利用可、月1,500回のプレミアムリクエスト |
-| **Business** | 組織 $19/ユーザー/月 | 組織管理・ポリシー制御、SSO対応 |
-| **Enterprise** | 大企業 $39/ユーザー/月 | カスタム設定・社内コードベース連携 |
+| **Copilot Free** | 個人（無料） | 限定的な機能・リクエスト数で AI コーディングを体験 |
+| **Copilot Student** | 学生（無料） | 無制限の補完、プレミアムモデル、coding agent |
+| **Copilot Pro** | 個人（有料） | 無制限の補完、プレミアムモデル、coding agent |
+| **Copilot Pro+** | 個人（有料） | Pro の全機能 ＋ より多いプレミアムリクエスト、全モデルアクセス |
+| **Copilot Business** | 組織 | coding agent、集中管理・ポリシー制御 |
+| **Copilot Enterprise** | 大規模企業 | Business の全機能 ＋ エンタープライズグレードの機能 |
 
-<br>
+- 教員・OSS メンテナーは Copilot Pro への無料アクセスが得られる場合あり
+- 2026年3月より **Copilot Student** プランに移行
 
-- 学生・教職員・OSS開発者向けの **無料プラン** あり
-- 2026年3月より **Copilot Student プラン** 開始
-
----
-
-## 対応モデル・エコシステム
-
-- **マルチモデル対応**：OpenAI、Anthropic、Google のモデルから選択可能
-  - GPT-5.x-Codex シリーズ、Claude Sonnet/Opus、Gemini Pro 等
-- **Auto モード**：タスクに最適なモデルを自動選択
-
-<br>
-
-### 主要な統合先
-- IDE：VS Code、Visual Studio、JetBrains、Neovim、Eclipse、Xcode
-- プラットフォーム：GitHub.com、GitHub Mobile、GitHub CLI
-- 外部ツール：Slack、Microsoft Teams、Azure Boards、Linear 等
+> 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)
 
 ---
 
@@ -290,92 +263,93 @@ style: |
 
 ## GitHub Universe 2025 とは
 
-- **開催日**：2025年10月28〜29日（San Francisco）
+- **開催日**：2025年10月28〜29日
+- **場所**：Fort Mason Center, San Francisco
 - GitHub が年に一度開催する開発者向けカンファレンス
-- 2025年は「**AI エージェント時代**」をテーマに多数のアップデートを発表
+
+### コンテンツトラック（3つ）
+1. 🚀 **Build faster, stay in flow** — AI ネイティブツールで開発ライフサイクルを変革
+2. 🔐 **Secure every commit** — AI 活用の脆弱性検出とシームレスなセキュリティ
+3. ⚡ **Automate and scale with confidence** — CI/CD 最適化と GitHub Copilot の ROI 測定
 
 <br>
 
-### キーメッセージ
-
-> *"Developers drive the AI agent era with GitHub."*
-
-<br>
-
-- AI による自動化の焦点が「コード補完」から「**自律的なコーディングエージェント**」へ
-- 開発者がエージェントを管理・統制する時代への移行を宣言
+> *"Build what's next on GitHub, the place for anyone from anywhere to build anything."*
 
 > 出典：[github.blog](https://github.blog/news-insights/company-news/github-universe-2025-heres-whats-in-store-at-this-years-developer-wonderland/)
 
 ---
 
-## 主な発表（1）：Agent HQ & ミッションコントロール
+## Universe 2025 発表（1）：Mission Control
 
-### Agent HQ
-- 複数の AI エージェントを一元管理するプラットフォーム
-- GitHub、OpenAI、Anthropic、Google 等のエージェントを統合
-- GitHub、VS Code、CLI、モバイルを横断した管理が可能
+### Copilot coding agent のタスク管理を刷新
+- セッションログを **Overview** / **Files changed** タブの横に表示
+- コミットの根拠をリアルタイムで確認しながら進捗をモニタリング
 
-### Mission Control
-- エージェントへのタスク割り当て・進捗追跡の一元ダッシュボード
-- エージェントのアイデンティティ管理・競合解消
-- **カスタムコーディングエージェント**の構築・デプロイが可能
-  - `AGENTS.md` でコーディング規約・振る舞いをリポジトリ単位で定義
+### リアルタイムステアリング
+- エージェントが動作中でも **リアルタイムにガイダンス** を提供可能
+- チャット入力、または Files changed ビュー内のコメントから直接フィードバック
 
-> 出典：[github.blog](https://github.blog)
+### タスク管理の集約
+- タスクステータスを一覧で把握、Copilot が確認を求める際に素早く対応
+- Codespaces・VS Code・GitHub CLI からシームレスに作業継続
 
----
-
-## 主な発表（2）：ワークフロー統合の強化
-
-### 外部ツールとの深い連携
-- Slack / Microsoft Teams / Azure Boards / Linear からエージェントにタスクを割り当て可能
-- タスク完了通知や自動サマリーを各ツールに配信
-
-### Copilot コーディングエージェントの機能拡張
-- **セルフホストインフラ**での実行対応（Enterprise 向け）
-- Web 検索による最新ドキュメントの参照
-- コンテキストを考慮したブランチ名・PR タイトルの自動生成
-- CodeQL を活用したセキュリティ脆弱性の自動検出・修正
-
-### MCP（Model Context Protocol）Registry
-- VS Code から Stripe、Figma、Sentry 等の外部サービスと直接連携
-
-> 出典：[github.blog](https://github.blog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2025-10-28-a-mission-control-to-assign-steer-and-track-copilot-coding-agent-tasks/)
 
 ---
 
-## 主な発表（3）：IDE の強化
+## Universe 2025 発表（2）：カスタムエージェント
 
-### VS Code
-- **Plan モード**：実装計画の立案と AI エージェントとの対話的な仕様確認
-- **AGENTS.md**：リポジトリ固有のコーディング規約をエージェントに自動適用
-- Copilot の **ワークスペースレベル設定**：モデル・インストラクション・機能のカスタマイズ
+### `.github/agents` 設定ファイルでエージェントをカスタマイズ
+- リポジトリまたは組織の `.github/agents` にマークダウンの設定ファイルを追加
+- エージェントのペルソナ・プロンプト・ツール選択・MCP サーバーを定義
 
-### JetBrains IDE
-- Copilot のタスク割り当てと実行が JetBrains 内で可能に
-- IntelliJ IDEA / その他 JetBrains 製品への対応拡充
+### 主なメリット
+- チームのワークフロー・規約・ニーズに特化したエージェントを定義
+- 組織固有・チーム固有のエージェントを共有リポジトリで管理
+- Copilot coding agent（github.com）、Copilot CLI で動作（VS Code は今後対応）
 
-### Visual Studio
-- スムーズな補完と改善されたワークフロー統合
+### 活用例
+- Frontend エンジニア向けサブエージェント（React/Vue の規約を強制）
+- GitHub CLI の MCP を使ってカスタムタスクを自動化するエージェント
 
-> 出典：[github.blog](https://github.blog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2025-10-28-custom-agents-for-github-copilot/)
 
 ---
 
-## 主な発表（4）：コード品質・エンタープライズ
+## Universe 2025 発表（3）：Slack 連携 / コード品質
 
-### Code Quality ダッシュボード
-- コードの保守性・信頼性・テストカバレッジを可視化
-- 組織全体での Copilot 利用状況・エージェント活動のダッシュボード
-- リーダーシップ向けに AI 活用の ROI を可視化
+### Copilot coding agent × Slack
+- Slack の GitHub アプリで `@GitHub` にメンションするだけで PR を生成
+- バックグラウンドで動作し、完成したら Slack スレッドに返信
+- Microsoft Teams との連携も GA 済み（2025年9月〜）
 
-### エンタープライズ向け AI ガバナンス
-- エージェントの監査可能性・バージョン管理
-- 組織ポリシーに基づくエージェント制御
-- AI 活用のリスク管理と効果測定
+### GitHub Code Quality（パブリックプレビュー）
+- PR をコード品質改善の機会に変換
+- CodeQL ベースの品質ルールで保守性・信頼性の問題を検出
+  - 対応言語：Java、C#、Python、JavaScript、Go、Ruby
+- **ワンクリック Copilot 修正**でインライン表示の指摘をすぐに対処
+- 信頼性・保守性スコアで技術的負債の優先順位を把握
 
-> 出典：[github.blog](https://github.blog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2025-10-28-work-with-copilot-coding-agent-in-slack/) / [github.blog/changelog](https://github.blog/changelog/2025-10-28-github-code-quality-in-public-preview/)
+
+---
+
+## Universe 2025 発表（4）：その他のアップデート
+
+### Immutable Releases（GA）
+- リリースのアセット・タグを公開後に改ざんできないよう保護
+- ソフトウェアサプライチェーンセキュリティの新たな層
+
+### ホームダッシュボードの刷新（パブリックプレビュー）
+- 最重要タスクを一画面で把握・アクションできるよう改善
+
+### Visual Studio — October 2025 Update
+- 新しいモデル選択肢の追加
+- よりプロジェクトを理解した Copilot の提案
+- Copilot Chat での **プランニング機能** の導入
+
+> 出典：[github.blog/changelog](https://github.blog/changelog/month/10-2025/) / [github.blog/changelog](https://github.blog/changelog/2025-10-27-github-copilot-in-visual-studio-october-update/)
 
 ---
 
@@ -388,120 +362,134 @@ style: |
 
 ---
 
-## 2025年11月のアップデート
-
-### コーディングエージェント
-- セルフホストインフラへの対応が正式化
-- Copilot coding agent による自動コードレビュー機能
-
-### Copilot Spaces
-- **パブリック共有**：Spaces を直リンクで公開可能に
-- **ファイル追加の簡略化**：github.com のコードビューアから直接 Spaces へ追加
-- **ロールベース制御**：Space・リポジトリレベルでのアクセス権管理
-
-### CLI の強化
-- セマンティックコードベース検索に対応
-- 主要な全モデルを CLI から利用可能に
-
-> 出典：[github.blog/changelog](https://github.blog/changelog)
-
----
-
 ## 2025年12月のアップデート
 
-### モデルの拡充
+### Copilot Memory（プレビュー）
+- Copilot Pro / Pro+ 向けにパブリックプレビュー開始
+- coding agent とコードレビューでリポジトリ固有のメモリをサポート
+- コードベースから重要な知見を蓄積し、エージェントの精度を向上
 
-<span class="tag tag-preview">Preview</span> **GPT-5.1-Codex-Max** が Copilot Pro/Business/Enterprise 向けに公開プレビュー
+### Agent Skills
+- **Agent Skills**：タスクを特定・繰り返し可能な方法で実行するよう Copilot に教える仕組み
+- スキルはフォルダー構成（インストラクション・スクリプト・リソース）
+- プロンプトに関連すると判断したとき自動的にロード
+- coding agent・Copilot CLI・VS Code のエージェントモードで動作
 
-<span class="tag tag-ga">GA</span> **Claude Opus 4.5** / **Gemini 3 Pro** の統合
+### API から Issue を Copilot にアサイン
+- GraphQL・REST API 経由でイシューを Copilot にアサイン可能に
 
-### カスタムエージェントの拡充
-- JetBrains IDE / Eclipse / Xcode でカスタムエージェントの作成・デプロイが可能に
-
-### エンタープライズ向け
-- BYOK（Bring Your Own Key）：Anthropic・OpenAI・xAI・Foundry の自前キー利用
-- データ保管場所（Data Residency）の設定が可能に
-
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2025-12-19-copilot-memory-early-access-for-pro-and-pro/) / [github.blog/changelog](https://github.blog/changelog/2025-12-18-github-copilot-now-supports-agent-skills/)
 
 ---
 
 ## 2026年1月のアップデート
 
+### Agents タブ（リポジトリ内）
+- Copilot coding agent のタスク管理がリポジトリ内の **Agents タブ** に統合
+- コード・PR・イシューと並んでセッションを管理
+- セッションログのグルーピングが改善、ファイル変更の diff をワンクリックで展開
+- **Copilot CLI** でセッションを継続する機能を追加
+
 ### Copilot SDK（テクニカルプレビュー）
-- Node.js / Python / Go / .NET から Copilot をプログラムから活用可能に
+- Copilot CLI へのプログラムアクセスを提供する言語別 SDK
+- 対応言語：**Node.js / Python / Go / .NET**
 
-### 新モデル
-<span class="tag tag-ga">GA</span> **GPT-5.2-Codex** が VS Code・Web・CLI 等で一般提供開始
+### ACP（Agent Client Protocol）のサポート（Copilot CLI）
+- AI エージェントとクライアント間の業界標準プロトコルを実装
+- サードパーティツール・IDE・自動化システムから Copilot CLI を統合可能に
 
-### エージェントの記憶（Agentic Memory）
-- リポジトリ固有のコンテキストを **28日間** 保持
-- プロジェクト構造やチームの好みを学習・記憶してより的確な提案へ
-
-### パフォーマンス分析ダッシュボード
-- Enterprise/Pro ユーザー向けに Copilot の採用状況・生産性への影響を可視化
-
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-01-26-introducing-the-agents-tab-in-your-repository/) / [github.blog/changelog](https://github.blog/changelog/2026-01-14-copilot-sdk-in-technical-preview/)
 
 ---
 
 ## 2026年2月のアップデート
 
-### 新モデルの追加
-<span class="tag tag-ga">GA</span> **Claude エージェント** / **Codex エージェント** が Business/Enterprise 向けに提供開始
+### Copilot CLI — GA（2026年2月25日）
+- ターミナルネイティブなコーディングエージェントとして **正式リリース**
+- Plan モード / Autopilot モード / 内蔵専門エージェント（Explore・Task・Code Review 等）
+- MCP・プラグイン・Agent Skills でカスタマイズ可能
+- セッションを超えた **リポジトリメモリ**（過去のコンテキストを記憶）
+- macOS / Linux / Windows 対応、GitHub Codespaces にも標準搭載
 
-### 使用状況メトリクスの拡充
-- エンタープライズレベルで **CLI アクティビティ** の追跡が可能に
-- チーム全体の Copilot 活用状況の見える化
+### Copilot メトリクス — GA
+- Copilot の採用状況・利用トレンドを一元管理
 
-### モバイル対応
-- GitHub Mobile で **Copilot coding agent のライブ通知** を受信可能に
+### Web 上の Copilot での Web 検索改善
+- 特定モデルでモデルネイティブの Web 検索が利用可能に
 
-### Visual Studio の改善
-- シンタックスハイライト付きのコード補完
+### Zed エディタサポート — GA
+- GitHub Copilot が Zed を公式サポート（Pro・Pro+・Business・Enterprise）
+
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/)
+
+---
+
+## 2026年2月のアップデート（続き）
+
+### Copilot coding agent — Windows プロジェクト対応
+- Windows プロジェクトで Copilot coding agent が利用可能に
+
+### Copilot coding agent — コード参照対応
+- エージェントが生成したコードがパブリックリポジトリのコードと一致する場合、一致したコードのリンクを表示
+
+### Visual Studio — January Update（2026年2月4日公開）
+- Copilot Chat の構文ハイライト付き補完
 - 部分的なコード提案の承認（Partial Acceptance）
-- Copilot Chat のマークダウンプレビュー強化
+- デバッグ・テスト・モダナイゼーション連携の強化
 
-> 出典：[github.blog/changelog](https://github.blog/changelog)
-
----
-
-## 2026年3月のアップデート（前半）
-
-### コーディングエージェントの強化
-<span class="tag tag-ga">GA</span> **エージェントの検証ツール**：エージェントが行う検証の設定オプション追加
-
-<span class="tag tag-ga">GA</span> **GPT-5.3-Codex** のサポート開始
-
-<span class="tag tag-preview">Preview</span> **Copilot for Jira**：Jira のイシューに Copilot コーディングエージェントを割り当て可能に
-
-### リポジトリ探索機能
-- Web 上の Copilot Chat で **ファイルツリーの閲覧・参照** が可能に
-
-### JetBrains IDE 向け改善
-- エージェント機能の強化
-- **Auto モデル選択**（タスクに応じた自動モデル切替）対応
-
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-02-18-use-copilot-coding-agent-with-windows-projects/) / [github.blog/changelog](https://github.blog/changelog/2026-02-18-copilot-coding-agent-supports-code-referencing/)
 
 ---
 
-## 2026年3月のアップデート（後半）
+## 2026年3月のアップデート（1）
 
-### 新モデルの追加
+### GPT-5.4 — GA（2026年3月5日）
+- OpenAI の最新エージェントコーディングモデル
+- 実世界・エージェント・ソフトウェア開発タスクで新たな成功率を達成
+- 強化された論理推論と複雑なマルチステップタスクの実行能力
+- VS Code / Visual Studio / JetBrains / Xcode / Eclipse / github.com / GitHub Mobile / CLI / coding agent で利用可能
 
-<span class="tag tag-ga">GA</span> **GPT-5.4 Mini**：高速なコード補完向け軽量モデル
+### エージェントセッションへの画像追加（2026年3月5日）
+- github.com の Agents タブなどで画像からエージェントセッションを開始
+- ペースト・ドラッグ&ドロップ・アイコンクリックで画像を添付
 
-### Copilot Student プラン
-- 学生向け無料プランを **Copilot Student プラン** として再編
-- 一部プレミアムモデルは Auto モードでのみ利用可能に
-- GitHub Student Developer Pack 経由で引き続き Copilot Pro を提供
+### Visual Studio — February Update（2026年3月4日公開）
+- 拡張されたエージェント機能
+- よりスマートなコード補完
+- デバッグ・テスト・モダナイゼーションワークフロー全体への深い統合
 
-### セキュリティの強化
-- MCP サーバー経由の AI コーディングエージェントに **シークレットスキャン**対応
-  - エージェントが誤ってシークレット情報を漏洩するリスクを軽減
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot/)
 
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+---
+
+## 2026年3月のアップデート（2）
+
+### GPT-5.3-Codex — LTS（長期サポート）モデル（2026年3月18日）
+- エンタープライズ向けに **12ヶ月間** の安定サポートを保証
+- 2026年2月5日リリース → 2027年2月4日まで Business / Enterprise で利用可能
+- GPT-4.1 に替わる **新しいベースモデル** として採用
+- エンタープライズで高いコードサバイバルレートを記録
+
+### Copilot coding agent の検証ツール設定（2026年3月18日）
+- coding agent がコードを書いたとき自動的に以下を実行：
+  - プロジェクトのテスト・リンター
+  - CodeQL・GitHub Advisory Database・シークレットスキャン・Copilot コードレビュー
+- **リポジトリ管理者**が実行する検証ツールを設定できるように
+
+### GitHub CLI から Copilot コードレビューをリクエスト（2026年3月11日）
+- `gh pr edit --add-reviewer @copilot` でターミナルから直接 Copilot にレビューを依頼
+
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot/) / [github.blog/changelog](https://github.blog/changelog/2026-03-18-configure-copilot-coding-agents-validation-tools/)
+
+---
+
+## 2026年3月のアップデート（3）
+
+### Copilot Student プランへの移行（2026年3月13日）
+- GitHub Education の特典を持つ学生が新しい **Copilot Student プラン** へ移行
+- 長期的・持続可能な学生向け Copilot 体験に向けたモデルラインナップを更新
+
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-13-updates-to-github-copilot-for-students/)
 
 ---
 
@@ -513,98 +501,80 @@ style: |
 
 ---
 
-## GitHub Actions の主なアップデート
+## GitHub Actions のアップデート
 
-### インフラ・ランナーの強化
-- **カスタムランナーオートスケーリング**（パブリックプレビュー）
-  - Kubernetes 不要でコンテナ・VM・ベアメタルで自動スケール可能
-  - マルチラベルジョブ割り当て・リアルタイムジョブテレメトリ対応
+### 環境をデプロイなしで利用可能に（2026年3月19日）
+- `deployment: false` キーで環境を設定すると、デプロイメントを作成せずにシークレット・変数を使用可能
+- デプロイ不要なシークレット・変数管理だけに環境を使いたいケースを解決
 
-### ワークフロー構文の改善
-- **タイムゾーン指定** が cron スケジュールで利用可能に
-- **環境（Environments）**：デプロイメントをトリガーせずに使用可能に
-  → シークレット・変数の管理のみに利用するユースケースが可能に
+### スケジュールワークフローのタイムゾーン対応（2026年3月19日）
+- cron スケジュールに IANA タイムゾーンを指定可能に（例：`timezone: "America/New_York"`）
+- UTC に縛られず、現地時間でワークフローを実行
 
-### Copilot エージェントとの連携
-- Copilot エージェントが起動する Actions ワークフローに対して**承認をスキップ**するオプション
+### Actions Runner Controller 0.14.0 — GA（2026年3月19日）
+- **マルチラベルサポート**：ランナースケールセット向け
+- `actions/scaleset` ライブラリクライアントに移行
+- リソースカスタマイズオプションの追加
 
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-19-github-actions-late-march-2026-updates/) / [github.blog/changelog](https://github.blog/changelog/2026-03-19-actions-runner-controller-release-0-14-0/)
 
 ---
 
 ## セキュリティ関連のアップデート
 
-### シークレットスキャン（2026年3月）
-- **28種** の新しいパターン検出器を追加
-- **39種**の検出器でプッシュ保護がデフォルト有効化
-  - 例：Airtable、Databricks、Heroku、Shopify、Vercel など
-- プッシュ保護の**除外設定**：チーム・ロール・アプリ単位で設定可能
+### Dependabot — npm マルウェア検出（2026年3月17日）
+- npm パッケージの悪意あるバージョンを検出する **Dependabot アラート** が利用可能に
+- GitHub Advisory Database のマルウェアアドバイザリと照合
+- CVE ベースの脆弱性アラートと別カテゴリーで管理
 
-### GitHub Advanced Security
-- 組織・リポジトリへの Advanced Security 設定の**ガイド付き導入体験**
-- コード品質の権限設定を**管理者専用**へ変更（セキュリティマネージャーロールからは削除）
+### GitHub Advanced Security — セットアップ簡素化（2026年3月17日）
+- 組織での Advanced Security 設定を簡単にするガイド付き体験
+- 設定・リポジトリターゲティングをより速く編集可能に
+- GitHub Enterprise Cloud で利用可能（GHES 3.22 でリリース予定）
 
-### Pull Request のセキュリティ改善
-- コードとコメントの並列表示（Side-by-side ビュー）
-- バッチコード品質改善提案の適用機能
+### シークレットスキャン パターン更新（2026年3月10日）
+- **28種** の新しいシークレット検出器（15プロバイダー：Lark、Vercel、Snowflake、Supabase 等）
+- **39種**の検出器でプッシュ保護がデフォルト有効化（Airtable、Databricks、Heroku 等）
+- Airtable / DeepSeek / npm / Pinecone / Sentry トークンへの **有効性チェック** 追加
 
-> 出典：[github.blog/changelog](https://github.blog/changelog)
-
----
-
-## GitHub Enterprise Server 3.20
-
-<span class="tag tag-ga">GA</span> **2026年3月 一般提供開始**
-
-### 主な改善点
-- **コードセキュリティ**の強化
-  - 最新のシークレットスキャン・コードスキャンとの同期
-- **ポリシー管理**の改善
-  - エンタープライズポリシーの細かな制御が可能に
-- **マージエクスペリエンス**の向上
-  - よりスムーズな PR マージフロー
-
-### エージェント制御プレーン
-- AI エージェントのガバナンス・監査・効果測定をエンタープライズで管理
-
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-17-dependabot-now-detects-malware-in-npm-dependencies/) / [github.blog/changelog](https://github.blog/changelog/2026-03-10-secret-scanning-pattern-updates-march-2026/)
 
 ---
 
-## REST API & 開発者向けアップデート
+## 開発者体験・プラットフォームのアップデート
 
-### REST API バージョン 2026-03-10
-- **カレンダーバージョニング**方式を採用
-- 破壊的変更と新機能の詳細なアップグレードガイドを提供
+### REST API バージョン 2026-03-10（2026年3月12日）
+- カレンダーベースのバージョニングで **初めて破壊的変更** を含むバージョンをリリース
+- `2022-11-28` は今後 24ヶ月以上サポート継続
+- `X-GitHub-Api-Version: 2026-03-10` ヘッダーで新バージョンに移行
 
-### コード品質ダッシュボード
-- 組織全体のコード品質メトリクス（保守性・信頼性・テストカバレッジ）を可視化
-- エンジニアリングリーダー向けに AI 活用の定量的効果を提示
+### リポジトリダッシュボード — GA（2026年2月24日）
+- アクセス可能なリポジトリを見つけ・フィルタリングし・カスタムビューを保存する機能が正式リリース
 
-### 開発者体験の改善
-- イシューへの Copilot エージェント割り当てを REST API 経由でプログラムから制御可能
-- より細かいリポジトリ・エージェント動作の制御オプション
+### Immutable Releases — GA（2025年10月28日 @Universe）
+- リリースのアセット・タグを公開後に改ざん不可能に保護
+- ソフトウェアサプライチェーンの信頼性を強化
 
-> 出典：[github.blog/changelog](https://github.blog/changelog)
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available/) / [github.blog/changelog](https://github.blog/changelog/2025-10-28-immutable-releases-are-now-generally-available/)
 
 ---
 
 ## まとめ
 
 ### GitHub Copilot の進化
-- **コード補完ツール** → **自律的なコーディングエージェントプラットフォーム** へ
-- 複数の AI モデルを選択・自動切替し、より的確な支援が可能に
-- エージェントの記憶機能でプロジェクト固有の文脈を継続的に学習
+- **コード補完ツール** から **自律的なコーディングエージェント** へ
+- Copilot CLI GA・Agent Skills・Copilot Memory など、エージェント基盤が着実に強化
+- GPT-5.4 GA・GPT-5.3-Codex LTS など、モデル選択肢と安定性も向上
 
 ### GitHub Universe 2025 のポイント
-- **Agent HQ** による複数エージェントの統一管理
-- `AGENTS.md` によるリポジトリ固有のエージェント制御
-- Slack / Teams / Jira 等の外部ツールとのシームレスな統合
+- **Mission Control** による Copilot coding agent タスクの一元管理
+- **Custom Agents**（`.github/agents/`）でチーム固有のエージェントを定義
+- Slack 連携・GitHub Code Quality など、開発ワークフロー全体を AI でカバー
 
-### 今後の注目点
-- Copilot for Jira などエージェントの適用範囲のさらなる拡大
-- エンタープライズ向けの AI ガバナンス・コンプライアンス強化
-- マルチエージェント協調による大規模タスクの自律実行
+### 2026年に注目のトレンド
+- Copilot coding agent の検証ツール設定など、**エージェントの信頼性・ガバナンス** の強化
+- Dependabot マルウェア検出など、**セキュリティの自動化** がさらに深化
+- REST API の新バージョンリリースなど、**プラットフォーム API の進化** が続く
 
 ---
 
