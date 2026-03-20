@@ -16,7 +16,9 @@ jobs:
     name: Build and Deploy Job
     permissions:
        id-token: write
-       contents: read
+       contents: write
+       pull-requests: write
+       administration: write  # required to update repository description via repos.update API
     steps:
       - uses: actions/checkout@v3
         with:
@@ -45,6 +47,74 @@ jobs:
           output_location: "output" # Built app content directory - optional
           github_id_token: ${{ steps.idtoken.outputs.result }}
           ###### End of Repository/Build Configurations ######
+      - name: Write job summary
+        run: |
+          echo "## 🚀 Deployment" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** ${{ steps.builddeploy.outputs.static_web_app_url }}" >> $GITHUB_STEP_SUMMARY
+      - name: Comment deployment URL on pull request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const url = '${{ steps.builddeploy.outputs.static_web_app_url }}';
+            const marker = '<!-- swa-preview-url -->';
+            const body = `${marker}\n## 🚀 Preview Deployment\n\n**URL:** ${url}`;
+            const comments = await github.rest.issues.listComments({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            const existing = comments.data.find(c => c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({
+                comment_id: existing.id,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body,
+              });
+            } else {
+              await github.rest.issues.createComment({
+                issue_number: context.issue.number,
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                body,
+              });
+            }
+      - name: Update README with deployment URL
+        if: github.event_name == 'push'
+        run: |
+          URL="${{ steps.builddeploy.outputs.static_web_app_url }}"
+          START="<!-- DEPLOYMENT_URL_START -->"
+          END="<!-- DEPLOYMENT_URL_END -->"
+          LINE="${START} 🌐 **Live Site**: [${URL}](${URL}) ${END}"
+          if grep -q "$START" README.md; then
+            sed -i "s|${START}.*${END}|${LINE}|" README.md
+          else
+            printf '\n%s\n' "$LINE" >> README.md
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --staged --quiet || git commit -m "docs: update deployment URL in README"
+          git push
+      - name: Update repository description
+        if: github.event_name == 'push'
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const url = '${{ steps.builddeploy.outputs.static_web_app_url }}';
+            const { data: repo } = await github.rest.repos.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+            });
+            const base = (repo.description || '').replace(/ \| 🌐 https?:\/\/\S+$/, '');
+            const description = base ? `${base} | 🌐 ${url}` : `🌐 ${url}`;
+            await github.rest.repos.update({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              description,
+            });
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
