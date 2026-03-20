@@ -1,0 +1,23 @@
+{
+  "name": "GitHub Updates 202603 - Marp Slides",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-22-bookworm",
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    }
+  },
+  "postCreateCommand": "npm install -g @marp-team/marp-cli",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "marp-team.marp-vscode"
+      ],
+      "settings": {
+        "markdown.marp.enableHtml": true,
+        "markdown.marp.exportType": "html",
+        "markdown.marp.outlineExtension": true
+      }
+    }
+  },
+  "forwardPorts": []
+}
