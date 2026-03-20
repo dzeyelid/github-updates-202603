@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "GitHub Copilot & GitHub Updates 2026/03 - Marp Slides",
   "scripts": {
-    "build": "marp slides/presentation.md --output slides/presentation.html --html",
-    "build:pdf": "marp slides/presentation.md --output slides/presentation.pdf --pdf --html",
+    "build": "marp slides/presentation.md --output output/index.html --html",
+    "build:pdf": "marp slides/presentation.md --output output/presentation.pdf --pdf --html",
     "preview": "marp slides/presentation.md --preview --html"
   },
   "devDependencies": {
