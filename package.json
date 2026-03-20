@@ -1,0 +1,13 @@
+{
+  "name": "github-updates-202603-slides",
+  "version": "1.0.0",
+  "description": "GitHub Copilot & GitHub Updates 2026/03 - Marp Slides",
+  "scripts": {
+    "build": "marp slides/presentation.md --output slides/presentation.html --html",
+    "build:pdf": "marp slides/presentation.md --output slides/presentation.pdf --pdf --html",
+    "preview": "marp slides/presentation.md --preview --html"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^4.0.0"
+  }
+}
