@@ -209,7 +209,6 @@ style: |
 - **GitHub.com**（Web）
 - **GitHub Mobile**（チャットインターフェース）
 - **コマンドライン**：GitHub CLI（Copilot CLI）
-- **Windows Terminal Canary**（Terminal Chat）
 
 > 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
@@ -217,18 +216,17 @@ style: |
 
 ## 主な機能
 
-### コード補完・提案
-- IDE でのインライン補完：コンテキストを読み取り次のコードをリアルタイム提案
+### 💻 IDE 上で使う機能
+- **Inline suggestion**：コンテキストを読み取り次のコードをリアルタイム提案
+- **Copilot Chat**：コードについて自然言語で質問・生成・説明を依頼
 
-### Copilot Chat
-- IDE や GitHub.com でコードについて自然言語で質問・生成・説明を依頼
+### 🤖 エージェントとして使う機能
+- **Copilot coding agent**：Issue をアサインするだけで、ブランチ作成・コード変更・PR 作成まで **自律実行**
+- **Copilot code review**：PR のコード変更を AI がレビューし、改善提案を提供
 
-### Copilot coding agent
-- Issue をアサインするだけで、ブランチ作成・コード変更・PR 作成まで **自律実行**
-- Copilot Pro+、Business、Enterprise で利用可能
-
-### その他
-- PR のコード変更の説明文を自動生成
+### 🌐 GitHub.com で使う機能
+- **Copilot Chat**（GitHub.com）：Web 上でコードについて質問・生成・説明を依頼
+- **PR サマリー自動生成**：PR のコード変更の説明文を自動生成
 - **Copilot Spaces**：コンテキストを整理・共有してより関連性の高い回答を取得
 
 > 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
@@ -247,7 +245,7 @@ style: |
 | **Copilot Enterprise** | 大規模企業 | Business の全機能 ＋ エンタープライズグレードの機能 |
 
 - 教員・OSS メンテナーは Copilot Pro への無料アクセスが得られる場合あり
-- 2026年3月より **Copilot Student** プランに移行
+- **Copilot Student** プランは、GitHub Education の特典からプランとして切り出された（2026年3月〜）
 
 > 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)
 
@@ -277,6 +275,21 @@ style: |
 > *"Build what's next on GitHub, the place for anyone from anywhere to build anything."*
 
 > 出典：[github.blog](https://github.blog/news-insights/company-news/github-universe-2025-heres-whats-in-store-at-this-years-developer-wonderland/)
+
+---
+
+## GitHub Universe 2025 発表まとめ
+
+### 公式レポートページ
+
+<br>
+
+> 🔗 **https://github.com/events/universe/recap?locale=ja**
+
+<br>
+
+GitHub Universe 2025 の全発表内容は、上記の公式レポートページにまとめられています。  
+基調講演・セッション・デモのハイライトを日本語でご覧いただけます。
 
 ---
 
@@ -455,7 +468,7 @@ style: |
 
 ### Visual Studio — February Update（2026年3月4日公開）
 - 拡張されたエージェント機能
-- よりスマートなコード補完
+- よりスマートな inline suggestion
 - デバッグ・テスト・モダナイゼーションワークフロー全体への深い統合
 
 > 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-05-gpt-5-4-is-generally-available-in-github-copilot/)
@@ -485,8 +498,8 @@ style: |
 
 ## 2026年3月のアップデート（3）
 
-### Copilot Student プランへの移行（2026年3月13日）
-- GitHub Education の特典を持つ学生が新しい **Copilot Student プラン** へ移行
+### Copilot Student プラン（2026年3月13日）
+- **GitHub Education の特典からプランとして切り出され**、新しい **Copilot Student プラン** として提供開始
 - 長期的・持続可能な学生向け Copilot 体験に向けたモデルラインナップを更新
 
 > 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-13-updates-to-github-copilot-for-students/)
