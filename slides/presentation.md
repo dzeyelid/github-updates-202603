@@ -280,16 +280,22 @@ style: |
 
 ## GitHub Universe 2025 発表まとめ
 
-### 公式レポートページ
+<div style="display:flex; gap:32px; align-items:flex-start;">
+<div style="flex:1;">
 
-<br>
+全発表のまとめは公式レポートページへ：
 
-> 🔗 **https://github.com/events/universe/recap?locale=ja**
+🔗 **https://github.com/events/universe/recap?locale=ja**
 
-<br>
-
-GitHub Universe 2025 の全発表内容は、上記の公式レポートページにまとめられています。  
 基調講演・セッション・デモのハイライトを日本語でご覧いただけます。
+
+</div>
+<div style="flex:1;">
+
+![GitHub Universe 2025 recap](images/universe-recap-screenshot.png)
+
+</div>
+</div>
 
 ---
 
