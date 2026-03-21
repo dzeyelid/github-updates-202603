@@ -16,7 +16,6 @@ jobs:
     name: Build and Deploy Job
     permissions:
        id-token: write
-       contents: write
        pull-requests: write
     steps:
       - uses: actions/checkout@v3
@@ -80,42 +79,6 @@ jobs:
                 body,
               });
             }
-      - name: Update README with deployment URL
-        if: github.event_name == 'push'
-        run: |
-          URL="${{ steps.builddeploy.outputs.static_web_app_url }}"
-          START="<!-- DEPLOYMENT_URL_START -->"
-          END="<!-- DEPLOYMENT_URL_END -->"
-          LINE="${START} 🌐 **Live Site**: [${URL}](${URL}) ${END}"
-          if grep -q "$START" README.md; then
-            sed -i "s|${START}.*${END}|${LINE}|" README.md
-          else
-            printf '\n%s\n' "$LINE" >> README.md
-          fi
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add README.md
-          git diff --staged --quiet || git commit -m "docs: update deployment URL in README"
-          git push
-      - name: Update repository description
-        if: github.event_name == 'push'
-        continue-on-error: true
-        uses: actions/github-script@v6
-        with:
-          script: |
-            const url = '${{ steps.builddeploy.outputs.static_web_app_url }}';
-            const { data: repo } = await github.rest.repos.get({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-            });
-            const base = (repo.description || '').replace(/ \| 🌐 https?:\/\/\S+$/, '');
-            const description = base ? `${base} | 🌐 ${url}` : `🌐 ${url}`;
-            await github.rest.repos.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              description,
-            });
-
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
     runs-on: ubuntu-latest
