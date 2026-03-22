@@ -80,26 +80,25 @@ size: 16:9
 - **GitHub Mobile**（チャットインターフェース）
 - **コマンドライン**：GitHub CLI（Copilot CLI）
 
-> 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+> 参考: [What is GitHub Copilot? - GitHub Docs](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
 
 ---
 
 ## 主な機能
 
 ### 💻 IDE 上で使う機能
-- **Inline suggestion**：コンテキストを読み取り次のコードをリアルタイム提案
-- **Copilot Chat**：コードについて自然言語で質問・生成・説明を依頼
+- **Inline suggestion**：ワークスペースからコンテキストを読み取り、次のコードをリアルタイムに提案
+- **Copilot Chat**：自然言語で、開発に関する会話や自律的なコードの生成を依頼（Agent/Ask/Planモード）
 
 ### 🤖 エージェントとして使う機能
-- **Copilot coding agent**：Issue をアサインするだけで、ブランチ作成・コード変更・PR 作成まで **自律実行**
-- **Copilot code review**：PR のコード変更を AI がレビューし、改善提案を提供
+- **Copilot coding agent**：AIエージェントがバックグラウンドで自律的に実装してくれる。Issueへのアサインをはじめ様々な経路で依頼できる
+- **Copilot code review**：プルリクエストのコード差分をGitHub Copilotにレビューさせる。IDE上では任意の差分に対してレビューを依頼できる。
 
 ### 🌐 GitHub.com で使う機能
-- **Copilot Chat**（GitHub.com）：Web 上でコードについて質問・生成・説明を依頼
-- **PR サマリー自動生成**：PR のコード変更の説明文を自動生成
+- **Copilot Chat**（GitHub.com）：Web 上でGitHub Copilotに質問できる
 - **Copilot Spaces**：コンテキストを整理・共有してより関連性の高い回答を取得
 
-> 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/what-is-github-copilot)
+> 参考: [GitHub Copilot features - GitHub Enterprise Cloud Docs](https://docs.github.com/en/enterprise-cloud@latest/copilot/get-started/features)
 
 ---
 
