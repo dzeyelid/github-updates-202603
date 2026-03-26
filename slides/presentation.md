@@ -19,7 +19,7 @@ size: 16:9
 
 ## 大平かづみ / Kazumi OHIRA
 
-<div style="display:flex; gap:48px; align-items:flex-start;">
+<div style="display:flex; gap:24px; align-items:flex-start;">
 <div style="flex:1;">
 
 - GitHub Star 🌟
