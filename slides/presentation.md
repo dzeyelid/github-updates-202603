@@ -243,6 +243,7 @@ size: 16:9
 - Slack の GitHub アプリで `@GitHub` にメンションするだけで PR を生成
 - バックグラウンドで動作し、完成したら Slack スレッドに返信
 - Microsoft Teams との連携も GA 済み（2025年9月〜）
+- Jira、Azure Boards からも Copilot にタスクを割り当て可能
 
 ### GitHub Code Quality（パブリックプレビュー）
 - PR をコード品質改善の機会に変換
