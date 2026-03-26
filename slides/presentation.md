@@ -491,6 +491,22 @@ size: 16:9
 
 ---
 
+## GitHub Projects の sub-issues 対応
+
+### Hierarchy view — GA（2026年3月19日）
+- Projects のテーブルビューで、親 Issue と **sub-issues の階層** をそのまま表示
+- 新規ビューではデフォルト有効、既存ビューでも **Show hierarchy** で切り替え可能
+- **8階層** まで展開・折りたたみでき、グループ化・ソート・フィルタでも階層を維持
+
+### 2026年2〜3月の改善
+- Project 上から **sub-issues をインライン追加**
+- **ドラッグ&ドロップ** で並び替え・親子関係の変更
+- sub-issue 向けフィルタの見つけやすさ改善、filtered view への自動反映を強化
+
+> 参考: [Hierarchy view now available in GitHub Projects](https://github.blog/changelog/2026-01-15-hierarchy-view-now-available-in-github-projects/) / [GitHub Projects: Import items based on a query and hierarchy view improvements](https://github.blog/changelog/2026-02-19-github-projects-import-items-based-on-a-query-and-hierarchy-view-improvements/) / [Hierarchy view in GitHub Projects is now generally available](https://github.blog/changelog/2026-03-19-hierarchy-view-in-github-projects-is-now-generally-available/)
+
+---
+
 ## セキュリティ関連のアップデート
 
 ### Dependabot — npm マルウェア検出（2026年3月17日）
