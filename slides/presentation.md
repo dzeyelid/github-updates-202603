@@ -17,6 +17,35 @@ size: 16:9
 
 <!-- _paginate: false -->
 
+## 大平かづみ / Kazumi OHIRA
+
+<div style="display:flex; gap:48px; align-items:flex-start;">
+<div style="flex:1;">
+
+- GitHub Star 🌟
+- 株式会社オルターブース所属
+- GitHub公認トレーナー
+- 得意な領域
+  - Infrastructure as Code
+  - GitHub Actions による自動化
+- 技術コミュニティ
+  - [Code Polaris](https://codepolaris.connpass.com/) / [GitHub dockyard](https://github-dockyard.connpass.com/)
+
+</div>
+<div style="flex:0 0 260px; text-align:left;">
+
+𝕏 [@dz_](https://x.com/dz_)
+🐙 [@dzeyelid](https://github.com/dzeyelid)
+▶️ [@dzeyelid](https://www.youtube.com/@dzeyelid)
+💬 [dzeyelid](https://www.twitch.tv/dzeyelid)
+
+</div>
+</div>
+
+---
+
+<!-- _paginate: false -->
+
 ## アジェンダ
 
 1. **GitHub Copilot の概要**
@@ -87,6 +116,27 @@ size: 16:9
 
 ---
 
+## プレミアムリクエストとは
+
+- **プレミアムリクエスト**：GPT-4o、Claude Sonnet、Gemini などの高性能モデルへのリクエスト
+  - デフォルトモデル（GPT-4.1 mini 相当）への補完や基本チャットはカウント対象外
+- プランごとに月ごとの上限が異なる
+
+| プラン | 月間プレミアムリクエスト数 |
+|--------|--------------------------|
+| **Copilot Free** | 50 回 |
+| **Copilot Student** | 500 回 |
+| **Copilot Pro** | 300 回 |
+| **Copilot Pro+** | 1,500 回 |
+| **Copilot Business** | 300 回 / ユーザー |
+| **Copilot Enterprise** | 1,000 回 / ユーザー |
+
+- 上限を超えた場合は追加購入（$0.04 / リクエスト）または低速レート制限に切り替わる
+
+> 出典：[docs.github.com](https://docs.github.com/en/copilot/about-github-copilot/subscription-plans-for-github-copilot)
+
+---
+
 <!-- _class: chapter -->
 <!-- _paginate: false -->
 
@@ -100,15 +150,12 @@ size: 16:9
 - **開催日**：2025年10月28〜29日
 - **場所**：Fort Mason Center, San Francisco
 - GitHub が年に一度開催する開発者向けカンファレンス
+- 🔗 [githubuniverse.com](https://githubuniverse.com)
 
 ### コンテンツトラック（3つ）
 1. 🚀 **Build faster, stay in flow** — AI ネイティブツールで開発ライフサイクルを変革
 2. 🔐 **Secure every commit** — AI 活用の脆弱性検出とシームレスなセキュリティ
 3. ⚡ **Automate and scale with confidence** — CI/CD 最適化と GitHub Copilot の ROI 測定
-
-<br>
-
-> *"Build what's next on GitHub, the place for anyone from anywhere to build anything."*
 
 > 出典：[github.blog](https://github.blog/news-insights/company-news/github-universe-2025-heres-whats-in-store-at-this-years-developer-wonderland/)
 
