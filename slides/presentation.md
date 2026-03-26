@@ -40,8 +40,8 @@ size: 16:9
 💬 [dzeyelid](https://www.twitch.tv/dzeyelid)
 
 <div style="display:flex; gap:12px; margin-top:16px;">
-<img src="https://lefthandzstatic.blob.core.windows.net/public/images/at-github-office.jpg" style="width:110px; height:110px; border-radius:50%; object-fit:cover;" />
-<img src="https://lefthandzstatic.blob.core.windows.net/public/images/illust091226.png" style="width:110px; height:110px; border-radius:50%; object-fit:cover;" />
+<img src="https://lefthandzstatic.blob.core.windows.net/public/images/at-github-office.jpg" style="width:198px; height:198px; border-radius:50%; object-fit:cover;" />
+<img src="https://lefthandzstatic.blob.core.windows.net/public/images/illust091226.png" style="width:198px; height:198px; border-radius:50%; object-fit:cover;" />
 </div>
 
 </div>
