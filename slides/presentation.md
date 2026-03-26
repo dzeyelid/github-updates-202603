@@ -32,7 +32,7 @@ size: 16:9
   - [Code Polaris](https://code-polaris.connpass.com) / [GitHub dockyard](https://github-dockyard.connpass.com)
 
 </div>
-<div style="flex:0 0 260px; text-align:left;">
+<div style="flex:1; text-align:left;">
 
 𝕏 [@dz_](https://x.com/dz_)
 🐙 [@dzeyelid](https://github.com/dzeyelid)
