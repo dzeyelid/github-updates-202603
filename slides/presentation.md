@@ -241,7 +241,6 @@ size: 16:9
 
 ### Copilot coding agent × Slack
 - Slack の GitHub アプリで `@GitHub` にメンションするだけで PR を生成
-- バックグラウンドで動作し、完成したら Slack スレッドに返信
 - Microsoft Teams との連携も GA 済み（2025年9月〜）
 - Jira、Azure Boards からも Copilot にタスクを割り当て可能
 
@@ -256,12 +255,18 @@ size: 16:9
 
 ---
 
-## Universe 2025 発表（4）：Code Review / Plan モード / MCP
+## Universe 2025 発表（4）：Copilot code review
 
 ### Copilot code review の機能追加
 - PR 全体の文脈を踏まえた **エージェンティックコードレビュー** を提供
 - モデルの推論と CodeQL を組み合わせ、品質上の問題をより広く検出
 - 修正提案の適用まで含めて、レビューの自動化を強化
+
+> 参考: [GitHub Universe 2025 Recap](https://github.com/events/universe/recap?locale=ja) / [New public preview features in Copilot code review](https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture/)
+
+---
+
+## Universe 2025 発表（5）：Plan モード / MCP
 
 ### Plan モード
 - VS Code 上で、コードを書く前に **ステップバイステップの実装計画** を策定
@@ -273,7 +278,7 @@ size: 16:9
 - VS Code 内で MCP インテグレーションをより簡単にセットアップ
 - エージェントの外部ツール連携を標準的な方法で拡張
 
-> 参考: [GitHub Universe 2025 Recap](https://github.com/events/universe/recap?locale=ja) / [New public preview features in Copilot code review](https://github.blog/changelog/2025-10-28-new-public-preview-features-in-copilot-code-review-ai-reviews-that-see-the-full-picture/) / [GitHub Copilot in Visual Studio Code gets upgraded](https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/)
+> 参考: [GitHub Universe 2025 Recap](https://github.com/events/universe/recap?locale=ja) / [GitHub Copilot in Visual Studio Code gets upgraded](https://github.blog/changelog/2025-10-28-github-copilot-in-visual-studio-code-gets-upgraded/)
 
 ---
 
@@ -341,9 +346,6 @@ size: 16:9
 ### Web 上の Copilot での Web 検索改善
 - 特定モデルでモデルネイティブの Web 検索が利用可能に
 
-### Zed エディタサポート — GA
-- GitHub Copilot が Zed を公式サポート（Pro・Pro+・Business・Enterprise）
-
 > 参考: [GitHub Copilot CLI is now generally available](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/)
 
 ---
@@ -394,6 +396,12 @@ size: 16:9
 - GPT-4.1 に替わる **新しいベースモデル** として採用
 - エンタープライズで高いコードサバイバルレートを記録
 
+> 参考: [GPT-5.3-Codex long-term support in GitHub Copilot](https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot/)
+
+---
+
+## 2026年3月のアップデート（3）
+
 ### Copilot coding agent の検証ツール設定（2026年3月18日）
 - coding agent がコードを書いたとき自動的に以下を実行：
   - プロジェクトのテスト・リンター
@@ -403,11 +411,11 @@ size: 16:9
 ### GitHub CLI から Copilot コードレビューをリクエスト（2026年3月11日）
 - `gh pr edit --add-reviewer @copilot` でターミナルから直接 Copilot にレビューを依頼
 
-> 参考: [GPT-5.3-Codex long-term support in GitHub Copilot](https://github.blog/changelog/2026-03-18-gpt-5-3-codex-long-term-support-in-github-copilot/) / [Configure Copilot coding agent’s validation tools](https://github.blog/changelog/2026-03-18-configure-copilot-coding-agents-validation-tools/)
+> 参考: [Configure Copilot coding agent’s validation tools](https://github.blog/changelog/2026-03-18-configure-copilot-coding-agents-validation-tools/)
 
 ---
 
-## 2026年3月のアップデート（3）
+## 2026年3月のアップデート（4）
 
 ### Copilot Student プラン（2026年3月13日）
 - **GitHub Education の特典からプランとして切り出され**、新しい **Copilot Student プラン** として提供開始
@@ -417,7 +425,7 @@ size: 16:9
 
 ---
 
-## 2026年3月のアップデート（4）
+## 2026年3月のアップデート（5）
 
 ### プライバシーポリシーと利用規約の更新（2026年3月25日）
 - **4月24日以降**、Copilot Free・Pro・Pro+ ユーザーのインタラクションデータ（入力・出力・コードスニペット等）を AI モデルの訓練・改善に利用開始
@@ -426,6 +434,28 @@ size: 16:9
 - プライバシーポリシーに「製品の開発・改善」目的を追加、アフィリエイト（Microsoft 等）との情報共有目的を拡大
 
 > 参考: [Updates to our Privacy Statement and Terms of Service: How we use your data](https://github.blog/changelog/2026-03-25-updates-to-our-privacy-statement-and-terms-of-service-how-we-use-your-data/)
+
+---
+
+## Copilot の周辺ツール連携
+
+### Linear
+- Issue / タスク管理の画面から `@GitHub Copilot` で coding agent を起動
+- 進捗・ログ・PR への流れを、プロダクト開発の文脈で追跡しやすい
+
+### Zed
+- GitHub Copilot が Zed を公式サポート
+- VS Code 以外の高速エディタでも Copilot を使う選択肢が広がった
+
+### OpenCode
+- GitHub でサインインして、Copilot アカウントを OpenCode から利用可能
+- ターミナル / デスクトップ / IDE 拡張で使える外部クライアントの例
+
+### Raycast
+- Raycast 拡張から coding agent タスクの起動、進捗確認、ライブログ閲覧が可能
+- GitHub を開かずに、ランチャー上からエージェント作業を追える
+
+> 参考: [GitHub Copilot CLI is now generally available](https://github.blog/changelog/2026-02-25-github-copilot-cli-is-now-generally-available/) / [Monitor Copilot coding agent logs live in Raycast](https://github.blog/changelog/2026-03-20-monitor-copilot-coding-agent-logs-live-in-raycast/) / [Linear](https://linear.app/) / [OpenCode](https://opencode.ai/)
 
 ---
 
@@ -497,6 +527,23 @@ size: 16:9
 - ソフトウェアサプライチェーンの信頼性を強化
 
 > 参考: [REST API version 2026-03-10 is now available](https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available/) / [Immutable releases are now generally available](https://github.blog/changelog/2025-10-28-immutable-releases-are-now-generally-available/)
+
+---
+
+## Pull request の Files changed も継続進化
+
+- **2025年6月**：新しい Files changed 体験が **public preview**
+  - 差分描画の高速化、リサイズ可能なファイルツリー、コメント/アノテーション用サイドパネル
+- **2025年9月**：大規模 PR 向け改善が進展
+  - **single file mode**、ファイル上限 **300 → 1,000**、変更行の周辺3行を超えて **未変更行にもコメント可能**
+- **2025年11〜12月**：レビュー文脈と絞り込みを強化
+  - PR 説明を Files changed 内の **Overview** で参照、**commit-by-commit review**、フィルタ改善、全体リロード削減
+- **2026年1〜2月**：新体験が標準化
+  - 新しい Files changed が **デフォルト化**、大規模 PR 用の仮想化モード、Conversation タブへ戻らず **全コメント参照**
+- **2026年3月**：横並びレビューへ発展
+  - コードと **Comments / Overview / Merge status / Alerts** を **side-by-side** で確認可能
+
+> 参考: [Improved pull request files changed experience now in public preview](https://github.blog/changelog/2025-06-26-improved-pull-request-files-changed-experience-now-in-public-preview/) / [Pull request “Files changed” public preview experience – September 11 updates](https://github.blog/changelog/2025-09-11-pull-request-files-changed-public-preview-experience-september-11-updates/) / [Pull request “Files changed” public preview now supports commenting on unchanged lines](https://github.blog/changelog/2025-09-25-pull-request-files-changed-public-preview-now-supports-commenting-on-unchanged-lines/) / [Quick access to the pull request description now in the “Files changed” public preview](https://github.blog/changelog/2025-11-20-pull-request-files-changed-public-preview-november-20-updates/) / [Review commit-by-commit, improved filtering, and more in the pull request “Files changed” public preview](https://github.blog/changelog/2025-12-11-review-commit-by-commit-improved-filtering-and-more-in-the-pull-request-files-changed-public-preview/) / [Improved pull request “Files changed” page on by default](https://github.blog/changelog/2026-01-22-improved-pull-request-files-changed-page-on-by-default/) / [Access all pull request comments without leaving the new Files changed page](https://github.blog/changelog/2026-02-19-access-all-pull-request-comments-without-leaving-the-new-files-changed-page/) / [View code and comments side-by-side in pull request Files changed page](https://github.blog/changelog/2026-03-19-view-code-and-comments-side-by-side-in-pull-request-files-changed-page/)
 
 ---
 
