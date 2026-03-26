@@ -395,6 +395,18 @@ size: 16:9
 
 ---
 
+## 2026年3月のアップデート（4）
+
+### プライバシーポリシーと利用規約の更新（2026年3月25日）
+- **4月24日以降**、Copilot Free・Pro・Pro+ ユーザーのインタラクションデータ（入力・出力・コードスニペット等）を AI モデルの訓練・改善に利用開始
+- [設定](https://github.com/settings/copilot)からオプトアウト可能
+- **Copilot Business・Enterprise ユーザーは対象外**
+- プライバシーポリシーに「製品の開発・改善」目的を追加、アフィリエイト（Microsoft 等）との情報共有目的を拡大
+
+> 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-25-updates-to-our-privacy-statement-and-terms-of-service-how-we-use-your-data/)
+
+---
+
 <!-- _class: chapter -->
 <!-- _paginate: false -->
 
@@ -417,6 +429,11 @@ size: 16:9
 - **マルチラベルサポート**：ランナースケールセット向け
 - `actions/scaleset` ライブラリクライアントに移行
 - リソースカスタマイズオプションの追加
+
+### runner scale set クライアント（`actions/scaleset`）
+- ARC が使用する `actions/scaleset` が **スタンドアロンの公開 Go パッケージ** として提供
+- プラットフォームチーム・インフラプロバイダーが **カスタムオートスケーリングソリューション** を構築可能に
+- ARC と同じクライアントライブラリを利用して GitHub Actions サービス API と通信できる
 
 > 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-19-github-actions-late-march-2026-updates/) / [github.blog/changelog](https://github.blog/changelog/2026-03-19-actions-runner-controller-release-0-14-0/)
 
@@ -458,6 +475,22 @@ size: 16:9
 - ソフトウェアサプライチェーンの信頼性を強化
 
 > 出典：[github.blog/changelog](https://github.blog/changelog/2026-03-12-rest-api-version-2026-03-10-is-now-available/) / [github.blog/changelog](https://github.blog/changelog/2025-10-28-immutable-releases-are-now-generally-available/)
+
+---
+
+## データレジデンシー（日本リージョン）
+
+### GitHub Enterprise Cloud — 日本リージョン GA（2025年12月18日）
+- **GitHub Enterprise Cloud with data residency** が日本リージョンで **GA**
+- コード・リポジトリデータを日本国内に保存でき、コンプライアンス・規制要件に対応
+- Microsoft Azure のグローバル分散データセンター基盤上で高可用性・セキュリティ・パフォーマンスを提供
+- 日本を含む地域の規制・コンプライアンス要件を持つ企業が対象
+
+### Codespaces — 日本リージョン対応（2026年3月19日）
+- データレジデンシー対応の Codespaces が **日本リージョンで利用可能** に
+- データレジデンシーを利用する Enterprise 顧客が日本リージョンで Codespaces を使えるように
+
+> 出典：[github.blog/changelog](https://github.blog/changelog/2025-12-18-github-enterprise-cloud-data-residency-in-japan-is-generally-available/) / [github.blog/changelog](https://github.blog/changelog/2026-03-19-codespaces-with-data-residency-now-available-in-japan/)
 
 ---
 
