@@ -29,7 +29,7 @@ size: 16:9
   - Infrastructure as Code
   - GitHub Actions による自動化
 - 技術コミュニティ
-  - [Code Polaris](https://codepolaris.connpass.com/) / [GitHub dockyard](https://github-dockyard.connpass.com/)
+  - [Code Polaris](https://code-polaris.connpass.com) / [GitHub dockyard](https://github-dockyard.connpass.com)
 
 </div>
 <div style="flex:0 0 260px; text-align:left;">
@@ -38,6 +38,11 @@ size: 16:9
 🐙 [@dzeyelid](https://github.com/dzeyelid)
 ▶️ [@dzeyelid](https://www.youtube.com/@dzeyelid)
 💬 [dzeyelid](https://www.twitch.tv/dzeyelid)
+
+<div style="display:flex; gap:12px; margin-top:16px;">
+<img src="https://lefthandzstatic.blob.core.windows.net/public/images/at-github-office.jpg" style="width:110px; height:110px; border-radius:50%; object-fit:cover;" />
+<img src="https://lefthandzstatic.blob.core.windows.net/public/images/illust091226.png" style="width:110px; height:110px; border-radius:50%; object-fit:cover;" />
+</div>
 
 </div>
 </div>
